@@ -65,6 +65,7 @@ end
 
 -- Vraci objekt informace $GPGGA (souradnice, case, satelity, presnost)
 function GetGPGGA(data)
+    
     --$GPGGA, 193433.00 , , , , ,0,00,99.99,,,,,,*69 
     if (data[7] == "0" or data[3] == nil or data[5] == nil) then
         return 
