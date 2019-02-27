@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        //UPLOAD
+        {
+            "label": "UPLOAD",
+            "type": "process",
+            "command": "wcc.exe",
+            "options": 
+            {
+                "env": {"ESP_PORT":"COM5"}
+            },
+            "args": ["-p", "${env:ESP_PORT}", "-up", "${file}", "${fileBasename}"],
+            "presentation": {"echo": true, "reveal": "never", "focus": false, "panel": "shared"},
+            "group": {"kind": "build", "isDefault": true},
+            "isBackground": false
+        }
+        
+    ]
+}

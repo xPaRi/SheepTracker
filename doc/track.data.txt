@@ -1,0 +1,50 @@
+149 $GPGSV,3,3,11,24,66,295,29,25,00,241,,28,18,057,16*4C 
+151 $GPGLL,4921.12682,N,01751.02270,E,160858.00,A,A*6F 
+
+153 $GPRMC,160859.00,A,4921.12656,N,01751.02285,E,1.319,,120119,,,A*74 
+155 $GPVTG,,T,,M,1.319,N,2.442,K,A*29 
+157 $GPGGA,160859.00,4921.12656,N,01751.02285,E,1,04,3.43,402.4,M,41.4,M,,*5B
+159 $GPGSA,A,3,24,15,13,12,,,,,,,,,6.61,3.43,5.65*02 
+161 $GPGSV,3,1,11,01,07,028,,10,15,306,,12,32,238,35,13,31,165,20*7A 
+163 $GPGSV,3,2,11,15,50,209,28,17,45,074,24,19,48,119,10,20,11,279,19*70 
+165 $GPGSV,3,3,11,24,66,295,29,25,00,241,,28,18,057,17*4D 
+167 $GPGLL,4921.12656,N,01751.02285,E,160859.00,A,A*6D 
+
+169 $GPRMC,160900.00,A,4921.12635,N,01751.02271,E,0.555,,120119,,,A*78 
+171 $GPVTG,,T,,M,0.555,N,1.029,K,A*2C 
+173 $GPGGA,160900.00,4921.12635,N,01751.02271,E,1,04,3.43,402.7,M,41.4,M,,*5B
+175 $GPGSA,A,3,24,15,13,12,,,,,,,,,6.61,3.43,5.65*02 
+177 $GPGSV,3,1,11,01,07,028,,10,15,306,19,12,32,238,34,13,31,165,20*73 
+
+https://www.boondog.com/tutorials/gps/gps.html
+http://aprs.gids.nl/nmea/
+http://www.astromik.org/raspi/50.htm
+
+$GPRMC  Recommended minimum specific GPS/TRANSIT data
+$GPVTG  Track made good and ground speed
+$GPGGA  GPS fixed data
+$GPGSA  GPS dillution of pecision and active satellites
+$GPGSV  GPS satellite in view
+$GPGLL  Geographical postiion, latitude and longitude
+$GPZDA  Time and date
+
+Zajímají nás GPGGA
+
+$GPGGA,160900.00,   4921.12635,N,01751.02271,E,  1,04, 3.43, 402.7,M, 41.4,M,,*5B
+
+$GPGGA,hhmmss.ss,ddmm.mmmm,n,dddmm.mmmm,e,q,ss,y.y,a.a,z,g.g,z,t.t,iii*CC
+  hhmmss.ss        in UTC (coordinated universal time zone).  UTC used be known as GMT.
+  
+  ddmm.mmmm,N      latitude of the GPS position fix
+  dddmm.mmmm,W     longitude of the GPS position fix
+
+  q                quality of the GPS fix (1 = fix, but no differential correction)
+  ss               number of satellites being used
+
+  y.y              horizontal dillution of precision
+  a.a,M            GPS antenna altitude in meters
+  g.g,M            geoidal separation in meters
+
+  t.t              age of the deferrential correction data
+  iiii             deferential station's ID
+  *CC              checksum for the sentence

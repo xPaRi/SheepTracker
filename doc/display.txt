@@ -1,0 +1,9 @@
+Rozložení znaků na displeji
+
+Bílá část
+[1; 1] - [127; 47]
+
+Žlutá část
+[1; 48] - [127; 63]
+
+dofile("tracker_v5.lua")
